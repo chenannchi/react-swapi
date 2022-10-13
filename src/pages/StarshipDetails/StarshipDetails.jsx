@@ -1,20 +1,40 @@
 import { useState, useEffect } from "react"
 import { useLocation } from "react-router-dom"
 import { getDetails } from "../../services/sw-api";
+import { Link } from "react-router-dom"
 
 const StarshipDetails = () => {
-  // const [starshipDetails, setStarshipDetails] = useState({})
-  // const location = useLocation()
+  const [starshipDetails, setStarshipDetails] = useState({})
+  const location = useLocation()
 
-  // useEffect(() => {
-  //   const fetchDetails = async () => {
-      
-  //   }
-  // })
+  useEffect(() => {
+    const fetchDetails = async () => {
+      const starshipDetails = await getDetails(location.state.starship.url)
+      setStarshipDetails(starshipDetails)
+    }
+    fetchDetails()
+  }, [location.state.starship.url])
 
-  return ( 
+  return (
     <>
-      <h3>Starship detail component</h3>
+      <div>
+        {starshipDetails.name ?
+        <>
+          <h3>{starshipDetails.name}</h3>
+          <div>{starshipDetails.model}</div>
+          <Link
+            to="/"
+          >
+            <div>RETURN</div>
+          </Link>
+        </>
+        :
+        <>
+          <p>Loading...</p>
+        </>
+
+        }
+      </div>
     </>
   );
 }

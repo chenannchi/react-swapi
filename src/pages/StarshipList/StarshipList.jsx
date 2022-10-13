@@ -17,20 +17,28 @@ const StarshipList = () => {
   return (
     <>
       <div>
-        <h3>STAR WARS STARSHIPS LIST</h3>
-        <div className="ship-container">
-          {starships.map(starship =>
-            <Link 
-              to='/starship' 
-              state={{ starship }} 
-              key={starship.name}
-            >
-              <div className="class-div">
-                {starship.name}
-              </div>
-            </Link>
-          )}
-        </div>
+        {starships ?
+          <>
+            <h3>STAR WARS STARSHIPS LIST</h3>
+            <div className="ship-container">
+              {starships.map(starship =>
+                <Link
+                  to='/starship'
+                  state={{ starship }}
+                  key={starship.name}
+                >
+                  <div className="class-div">
+                    {starship.name}
+                  </div>
+                </Link>
+              )}
+            </div>
+          </>
+          :
+          <>
+            Loading...
+          </>
+        }
       </div>
     </>
   );
