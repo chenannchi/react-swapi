@@ -17,7 +17,6 @@ const StarshipList = () => {
   return (
     <>
       <div>
-        {starships ?
           <>
             <h3>STAR WARS STARSHIPS LIST</h3>
             <div className="ship-container">
@@ -34,11 +33,6 @@ const StarshipList = () => {
               )}
             </div>
           </>
-          :
-          <>
-            Loading...
-          </>
-        }
       </div>
     </>
   );
