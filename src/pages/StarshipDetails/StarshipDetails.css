@@ -1,0 +1,55 @@
+html,body{
+  margin: 0;
+  height: 100%;
+}
+
+.card{
+  font-size: 25px;
+  border: black 2px solid;
+  min-width: 400px;
+  min-height: 200px;
+  padding: 0 20px;
+  background-color: rgb(6, 53, 50);
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 5px;
+}
+
+a{
+  text-decoration:underline;
+}
+
+#title{
+  width: 100vw;
+  text-align: center;
+  background-color: black;
+  font-size: 30px;
+  /* height: 10vh; */
+  vertical-align: middle;
+}
+
+#page{
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+#page *{
+  color: white;
+}
+
+.card-container{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root{
+  height: 100vh;
+}

@@ -1,0 +1,68 @@
+html,body{
+  margin: 0;
+  height: 100%;
+  color: white;
+}
+
+.link{
+  text-decoration: none;
+}
+
+.list-card{
+  font-size: 25px;
+  width: 20%;
+  height: 20vh;
+  border: black 2px solid;
+  background-color: rgb(6, 53, 50);
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  border-radius: 5px;
+  margin: 1%;
+  padding: 1%;
+}
+
+#title{
+  width: 100vw;
+  text-align: center;
+  background-color: black;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+#page{
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  margin: 0;
+}
+
+#page *{
+  color: white;
+}
+
+.list-card-container{
+  margin-top: 50px;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.class-div{
+  text-align: center;
+}
+
+#all-starships{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* width: 100%; */
+}
+
+#root{
+  height: 100vh;
+}
